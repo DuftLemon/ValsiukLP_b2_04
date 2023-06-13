@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValsiukLP_b2_04.Views.AboutPage"
+             xmlns:vm="clr-namespace:ValsiukLP_b2_04.ViewModels"
+             Title="{Binding Title}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"></RowDefinition>
+            <RowDefinition Height="420"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <RelativeLayout>
+                <Label RelativeLayout.YConstraint="65" RelativeLayout.XConstraint="100" Text="Регистрация" FontSize="36" FontAttributes="Bold" TextColor="#83D96E"></Label>
+            </RelativeLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Background="#83D96E">
+            <Image Source="Images\v4.jpg"></Image>
+            <Label Margin="55, 55, 0, 0" Text="Введите ваш логин и пароль" FontSize="14" TextColor="#000000"></Label>
+            <Entry x:Name="loginENT" Margin="50, 0, 73, 0" Placeholder="Логин"></Entry>
+            <Entry x:Name="passENT" Margin="50, 0, 73, 0" Placeholder="Пароль" IsPassword="True"></Entry>
+            <Button Margin="35,110,35,0" CornerRadius="20" Clicked="Button_Clicked" BackgroundColor="#375F40" Text="Войти"  FontSize="24"></Button> 
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>
